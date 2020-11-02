@@ -1,5 +1,5 @@
 module "kergiva_api" {
-  source = "github.com/rationalhealthcare/terraform-octal-kergiva-api?ref=v1.0.0"
+  source = "github.com/rationalhealthcare/terraform-octal-kergiva-api?ref=main"
 
   cluster_endpoint         = "https://kubernetes.default.svc"
   cluster_cert_issuer      = data.terraform_remote_state.infra.outputs.cluster_cert_issuer
