@@ -15,4 +15,12 @@ terraform {
       source = "hashicorp/random"
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "turnbros"
+
+    workspaces {
+      name = "homestead-kergiva-stage-do-nyc3"
+    }
+  }
 }
