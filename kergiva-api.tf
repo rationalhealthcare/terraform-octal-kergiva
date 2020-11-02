@@ -7,6 +7,7 @@ module "kergiva_api" {
   cluster_argocd_namespace = data.terraform_remote_state.infra.outputs.cluster_argocd_namespace
 
   project_name      = module.project.name
+  environment       = local.environment_map[var.environment]
   namespace         = kubernetes_namespace.rational_healthcare.metadata.0.name
   domain_name       = var.kergiva_api_domain_name
   chart_version     = var.kergiva_api_chart_version
