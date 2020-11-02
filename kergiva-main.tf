@@ -1,6 +1,6 @@
 resource "kubernetes_namespace" "rational_healthcare" {
   metadata {
-    name = "${local.project_name}-${var.environment}"
+    name = local.instance_name
   }
 }
 
