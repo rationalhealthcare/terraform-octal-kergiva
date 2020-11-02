@@ -11,5 +11,8 @@ terraform {
     mysql = {
       source = "terraform-providers/mysql"
     }
+    random = {
+      source = "hashicorp/random"
+    }
   }
 }
