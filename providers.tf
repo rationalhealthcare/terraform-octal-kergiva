@@ -1,6 +1,3 @@
-provider "digitalocean" {
-  token = var.digital_ocean_token
-}
 provider "kubernetes" {
   load_config_file       = false
   host                   = data.terraform_remote_state.infra.outputs.cluster_endpoint
