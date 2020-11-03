@@ -1,3 +1,7 @@
+variable "digital_ocean_token" {
+  type        = string
+  description = "The token to used to authenticate to digital ocean"
+}
 variable "environment" {
   type        = string
   description = "The name of the environment for this Kergiva deployment"
