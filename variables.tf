@@ -2,10 +2,6 @@ variable "environment" {
   type        = string
   description = "The name of the environment for this Kergiva deployment"
 }
-variable "digital_ocean_token" {
-  type        = string
-  description = "The Digital Ocean authentication token to use when provisioning cloud resources directly"
-}
 variable "image_pull_secret" {
   type        = string
   description = "The image pull secret to use when pulling Kergiva images"

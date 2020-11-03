@@ -1,6 +1,6 @@
 resource "kubernetes_namespace" "rational_healthcare" {
   metadata {
-    name = "${local.project_name}-${var.environment}"
+    name = local.instance_name
   }
 }
 
@@ -19,7 +19,7 @@ module "project" {
   source = "github.com/turnbros/terraform-argocd-project?ref=v1.0.0"
 
   argocd_namespace = data.terraform_remote_state.infra.outputs.cluster_argocd_namespace
-  name             = local.project_name
+  name             = local.instance_name
   description      = local.project_description
   destinations = [
     {

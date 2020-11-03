@@ -8,8 +8,19 @@ terraform {
       source  = "banzaicloud/k8s"
       version = "0.8.0"
     }
-    digitalocean = {
-      source = "digitalocean/digitalocean"
+    mysql = {
+      source = "terraform-providers/mysql"
+    }
+    random = {
+      source = "hashicorp/random"
+    }
+  }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "turnbros"
+
+    workspaces {
+      name = "homestead-kergiva-stage-do-nyc3"
     }
   }
 }
