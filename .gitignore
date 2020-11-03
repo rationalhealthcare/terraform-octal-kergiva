@@ -1,7 +1,5 @@
 .idea
 
-temp.tfvars
-
 # Local .terraform directories
 **/.terraform/*
 

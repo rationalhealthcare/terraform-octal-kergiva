@@ -20,5 +20,5 @@ module "kergiva_api" {
   database_port     = data.terraform_remote_state.infra.outputs.database_port
   database_name     = mysql_database.kergiva_api_db.name
   database_username = mysql_user.kergiva_api_db_user.user
-  database_password = mysql_user.kergiva_api_db_user.password
+  database_password = random_password.kergiva_api_db_user_password.result
 }
