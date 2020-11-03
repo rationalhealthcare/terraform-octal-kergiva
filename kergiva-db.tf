@@ -5,7 +5,7 @@ resource "random_password" "kergiva_api_db_user_password" {
 }
 resource "mysql_user" "kergiva_api_db_user" {
   user               = replace(local.instance_name, "-", "_")
-  host               = "*"
+  host               = "%"
   plaintext_password = random_password.kergiva_api_db_user_password.result
 }
 resource "mysql_database" "kergiva_api_db" {
@@ -13,7 +13,7 @@ resource "mysql_database" "kergiva_api_db" {
 }
 resource "mysql_grant" "kergiva_api_db_user_grant" {
   user       = mysql_user.kergiva_api_db_user.user
-  host       = "*"
+  host       = "%"
   database   = mysql_database.kergiva_api_db.name
   privileges = ["ALL"]
 }
