@@ -20,7 +20,8 @@ terraform {
     organization = "turnbros"
 
     workspaces {
-      name = "homestead-kergiva-stage-do-nyc3"
+     # name = "homestead-kergiva-stg-do-nyc3"
+      name = "homestead-kergiva-"
     }
   }
 }
