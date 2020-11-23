@@ -21,7 +21,7 @@ terraform {
 
     workspaces {
      # name = "homestead-kergiva-stg-do-nyc3"
-      name = "homestead-kergiva-"
+      prefix = "homestead-kergiva-"
     }
   }
 }
