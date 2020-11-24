@@ -27,4 +27,18 @@ module "project" {
       namespace = kubernetes_namespace.rational_healthcare.metadata.0.name
     }
   ]
+  oidc_group_role_membership = {
+    "argocd-kergiva-developers" = [
+      "argocd-kergiva-developers"
+    ]
+  }
+  roles = [
+    {
+      name = "argocd-kergiva-developers"
+      description = "A role for the developers of Kergiva"
+      policies = [
+        "p, proj:${local.instance_name}:argocd-kergiva-developers, applications, get, ${local.instance_name}/*, allow"
+      ]
+    }
+  ]
 }

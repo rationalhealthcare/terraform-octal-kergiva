@@ -20,7 +20,6 @@ terraform {
     organization = "turnbros"
 
     workspaces {
-     # name = "homestead-kergiva-stg-do-nyc3"
       prefix = "homestead-kergiva-"
     }
   }
