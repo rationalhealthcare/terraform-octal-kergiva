@@ -37,7 +37,7 @@ module "project" {
       name = "argocd-kergiva-developers"
       description = "A role for the developers of Kergiva"
       policies = [
-        "p, role:argocd-kergiva-developers, applications, get, ${local.instance_name}/*, allow"
+        "p, proj:${local.instance_name}:argocd-kergiva-developers, applications, get, ${local.instance_name}/*, allow"
       ]
     }
   ]
