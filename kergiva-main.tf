@@ -36,6 +36,11 @@ module "project" {
           resource = "applications"
           action = "get"
           object = "*"
+        },
+        {
+          resource = "applications"
+          action = "sync"
+          object = "*"
         }
       ]
       oidc_groups = [
